@@ -29,6 +29,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
+app.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send({ message: 'Hello, World!' });
+});
 app.use(webNewsRouter)
 app.use(webProductRouter)
 
